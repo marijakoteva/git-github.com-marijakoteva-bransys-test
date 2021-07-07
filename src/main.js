@@ -1,8 +1,21 @@
-import Vue from 'vue'
-import App from './App.vue'
+import "@babel/polyfill";
+import "mutationobserver-shim";
+import Vue from "vue";
+import Vuelidate from 'vuelidate'
+import "./plugins/bootstrap-vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import VueMask from "v-mask";
 
-Vue.config.productionTip = false
+
+Vue.use(Vuelidate);
+Vue.use(VueMask);
+
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  router,
+  store,
+  render: h => h(App)
+}).$mount("#app");

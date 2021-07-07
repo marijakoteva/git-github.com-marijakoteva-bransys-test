@@ -1,28 +1,46 @@
+
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="nav">      
+      <router-link to="/VehicleEntryForm">Vehicle Entry Form</router-link> |
+      <router-link to="/GridOfVehicles">Grid of vehicles</router-link>
+    </div>
+    <router-view />
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+<style lang="scss">
+ .btn-vue{
+    background: #474749;
+    color: #1bdf25;
+    font-weight: bold;
 }
-</script>
-
-<style>
+html, body, .container-table{
+  height: 100%;
+  background-color:  #ccd6eb;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #1bdf25;  
+}
+#nav {
+  padding: 30px;
+
+
+a { font-weight: bold;
+    color: #1bdf25;
+
+    &.router-link-exact-active {
+      color: #1bdf25;
+    }
+  }
+}
+.btn-primary{
+    background: #575a58;
+    color: #1bdf25;
+    font-weight: bold;
 }
 </style>
